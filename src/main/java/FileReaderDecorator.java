@@ -17,21 +17,20 @@ public class FileReaderDecorator implements IFileReader {
 
     @Override
     public boolean open(String fileName) throws IOException {
-        System.out.println("+FileReaderDecorator.open with parameter: " + fileName);
         //TODO Possibly: with reader usage
-        boolean isOk = true;
+        boolean isFileExist = true;
         if(reader != null) {
-            isOk = reader.open(fileName);
+            isFileExist = reader.open(fileName);
         }
 
+        System.out.println("+FileReaderDecorator.open with parameter: " + fileName);
         //TODO: Open file (ina default way)
-        System.out.println("Just trying to open TXT file: " + fileName);
-        return isOk;
+        System.out.println("FileReaderDecorator::open::Just trying to open TXT file: " + fileName);
+        return isFileExist;
     }
 
     @Override
     public ByteArrayOutputStream read() throws IOException {
-        System.out.println("+FileReaderDecorator.read without parameters");
         //TODO: Implement additional behavior using reader
 
         ByteArrayOutputStream readerStream = null;
@@ -41,8 +40,9 @@ public class FileReaderDecorator implements IFileReader {
             readerStream = new ByteArrayOutputStream();
         }
 
+        System.out.println("+FileReaderDecorator.read without parameters");
         //TODO: Read file (in a default way)
-        System.out.println("Just trying to read TXT file");
+        System.out.println("FileReaderDecorator::read::Just trying to read TXT file");
 
         return readerStream;
     }

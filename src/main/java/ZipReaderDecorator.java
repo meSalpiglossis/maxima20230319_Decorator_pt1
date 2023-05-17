@@ -17,25 +17,21 @@ public class ZipReaderDecorator implements IFileReader {
 
     @Override
     public boolean open(String fileName) throws IOException {
-        System.out.println("+ZipReaderDecorator.open with parameter: " + fileName);
-
-        ////TODO Possibly: with reader usage
-        boolean isOk = true;
+        //TODO Possibly: with reader usage
+        boolean isFileExist = true;
         if(reader != null) {
-            isOk = reader.open(fileName);
+            isFileExist = reader.open(fileName);
         }
-        //boolean isOk = reader.open(fileName);
 
-        //TODO: Open file (ina default way)
-        System.out.println("Just trying to open ZIP file: " + fileName);
-        return isValidFileType(fileName) && !isPasswordRequired(fileName);
+        System.out.println("+ZipReaderDecorator.open with parameter: " + fileName);
+        //TODO: Open file (in a default way)
+        System.out.println("ZipReaderDecorator::open::Just trying to open ZIP file: " + fileName);
+        return isFileExist && isValidFileType(fileName) && !isPasswordRequired(fileName);
     }
 
     @Override
     public ByteArrayOutputStream read() throws IOException {
-        System.out.println("+ZipReaderDecorator.read without parameters");
         //TODO: Implement additional behavior using reader
-
         ByteArrayOutputStream readerStream = null;
         if(reader != null) {
             readerStream = reader.read();
@@ -43,8 +39,9 @@ public class ZipReaderDecorator implements IFileReader {
             readerStream = new ByteArrayOutputStream();
         }
 
+        System.out.println("+ZipReaderDecorator.read without parameters");
         //TODO: Read file (in a default way)
-        System.out.println("Just trying to read ZIP file");
+        System.out.println("ZipReaderDecorator::read::Just trying to read ZIP file");
         return readerStream;
     }
 
