@@ -6,8 +6,8 @@ abstract class Decorator implements IComponent {
 
     public Decorator (IComponent concreteComponent) {
         this.component = concreteComponent;
-//        System.out.println("\n" + "Decorator constructor: this.component = concreteComponent");
-//        System.out.println("=========================================================");
+        System.out.println("\n" + "Decorator constructor: this.component = concreteComponent");
+        System.out.println("=========================================================");
     }
 
     public void wrap (IComponent concreteComponent) {

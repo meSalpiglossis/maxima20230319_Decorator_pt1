@@ -4,7 +4,6 @@ public class ConcreteDecoratorA extends Decorator {
 
     public ConcreteDecoratorA(IComponent concreteComponent) {
         super(concreteComponent);
-
     }
 
     @Override

@@ -6,10 +6,6 @@ public class Example2Demo {
         IComponent compA;
         IComponent compB;
 
-//        comp.operation();
-
-
-
         compA = new ConcreteDecoratorA(comp);
         System.out.println("\nNow comp wrapped by ConcreteDecoratorA and now it's a " + compA);
         System.out.println("NOW WE RUN operation() AFTER WRAPPING comp OBJECT");
@@ -35,7 +31,5 @@ public class Example2Demo {
         comp.operation();
 
         System.out.println("***************************************************************");
-
-
     }
 }
