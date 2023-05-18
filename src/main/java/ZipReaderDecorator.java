@@ -42,7 +42,7 @@ public class ZipReaderDecorator implements IFileReader {
         System.out.println("+ZipReaderDecorator.read without parameters");
         //TODO: Read file (in a default way)
         System.out.println("ZipReaderDecorator::read::Just trying to read ZIP file");
-        return readerStream;
+        return unZip(readerStream);
     }
 
     private void logDependencyAdding(IFileReader reader, String methodName) {
