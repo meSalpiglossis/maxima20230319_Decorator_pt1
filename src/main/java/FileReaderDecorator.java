@@ -25,7 +25,7 @@ public class FileReaderDecorator implements IFileReader {
 
         System.out.println("+FileReaderDecorator.open with parameter: " + fileName);
         //TODO: Open file (ina default way)
-        System.out.println("FileReaderDecorator::open::Just trying to open TXT file: " + fileName);
+        System.out.println("FileReaderDecorator::open::Trying to open TXT file: " + fileName);
         return isFileExist;
     }
 
@@ -42,7 +42,7 @@ public class FileReaderDecorator implements IFileReader {
 
         System.out.println("+FileReaderDecorator.read without parameters");
         //TODO: Read file (in a default way)
-        System.out.println("FileReaderDecorator::read::Just trying to read TXT file");
+        System.out.println("FileReaderDecorator::read::Reading TXT file");
 
         return readerStream;
     }

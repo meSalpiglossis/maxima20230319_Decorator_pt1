@@ -25,7 +25,7 @@ public class ZipReaderDecorator implements IFileReader {
 
         System.out.println("+ZipReaderDecorator.open with parameter: " + fileName);
         //TODO: Open file (in a default way)
-        System.out.println("ZipReaderDecorator::open::Just trying to open ZIP file: " + fileName);
+        System.out.println("ZipReaderDecorator::open::Trying to open ZIP file: " + fileName);
         return isFileExist && isValidFileType(fileName) && !isPasswordRequired(fileName);
     }
 
@@ -41,7 +41,7 @@ public class ZipReaderDecorator implements IFileReader {
 
         System.out.println("+ZipReaderDecorator.read without parameters");
         //TODO: Read file (in a default way)
-        System.out.println("ZipReaderDecorator::read::Just trying to read ZIP file");
+        System.out.println("ZipReaderDecorator::read::Reading ZIP file");
         return unZip(readerStream);
     }
 
